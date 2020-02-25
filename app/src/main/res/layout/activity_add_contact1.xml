@@ -1,0 +1,301 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.proba_db.Add_contact1">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#EEEEEE"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="#795548"
+            android:textIsSelectable="true"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="Всі ваші особисті дані не будуть доступні іншим користувачам"/>
+
+        <View
+            android:id="@+id/View04"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+    <EditText
+        android:id="@+id/etSurname"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:inputType="textPersonName"
+        android:textIsSelectable="true"
+        android:hint="Прізвище.."/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        android:inputType="textPersonName"
+        android:hint="Ім'я.."/>
+
+    <EditText
+        android:id="@+id/etSecond_name"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        android:inputType="textPersonName"
+        android:hint="По батькові.."/>
+
+        <EditText
+            android:id="@+id/etPhoneNumberMy"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:textSize="20dp"
+            android:inputType="phone"
+            android:hint="Номер телефону.."/>
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:textSize="20dp"
+            android:inputType="textMultiLine"
+            android:hint="Домашня адреса.."/>
+
+        <View
+            android:id="@+id/View02"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="#F44336"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="Введіть номер телефону довіреної особи, яка у небезпечних ситуаціях отримає повідомлення про тривогу."/>
+
+    <EditText
+        android:id="@+id/etPhone_number"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:inputType="phone"
+        android:textIsSelectable="true"
+        android:hint="Номер телефону.."/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="#795548"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="Необхідний для авторизації у особистому кабінеті."/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_height="fill_parent">
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textIsSelectable="true"
+        android:inputType="textPassword"
+        android:layout_weight="1"
+        android:hint="Пароль.."/>
+
+        <ImageView
+            android:id="@+id/tvShowPassword"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:onClick="onclickShowPassword"
+            android:background="@drawable/eye"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/View05"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="#795548"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="Якщо обрано анонімність, ваші дані при пошуку відображаються частково."/>
+
+        <CheckBox
+            android:id="@+id/cbAnonymity"
+            android:layout_width="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Анонімність"/>
+
+        <View
+            android:id="@+id/View06"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="#F44336"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="Для введення дати натисніть по відповідному напису."/>
+
+
+        <TextView
+        android:id="@+id/tvDateBorn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+            android:textColor="#000000"
+        android:onClick="onclickDateBorn"
+        android:layout_gravity="center_horizontal"
+        android:text="Дата народження:"
+        android:layout_margin="20dp"
+        android:textSize="20sp">
+    </TextView>
+
+        <View
+            android:id="@+id/View08"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="2"
+            android:textColor="#795548"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="Вкажіть маршрут, яким вирушаєте."/>
+
+        <Spinner
+            android:id="@+id/spinner_map"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+        </Spinner>
+
+
+    <fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    map:uiCompass="true"
+    map:cameraZoom="4"
+        android:layout_margin="20dp"
+    map:uiRotateGestures="true"
+    map:uiScrollGestures="true"
+    map:uiTiltGestures="true"
+    map:uiZoomControls="true"
+    map:uiZoomGestures="true"/>
+
+        <View
+            android:id="@+id/View12"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="#F44336"
+            android:textSize="14dp"
+            android:textStyle="italic"
+            android:text="Перед завершенням реєстрації перевірте правильність введених вами даних."/>
+
+        <Button
+            android:id="@+id/bRedistr"
+            android:layout_margin="15dp"
+            android:text="  Додати користувача  "
+            android:textSize="18dp"
+            android:textColor="#787091"
+            android:drawableLeft="@drawable/iconsadd"
+            android:background="#ffff"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="add_contact"/>
+
+    </LinearLayout>
+   </ScrollView>

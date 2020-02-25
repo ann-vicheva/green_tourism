@@ -1,0 +1,417 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.proba_db.Change_contact1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#EEEEEE"
+        android:focusableInTouchMode="true"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:textIsSelectable="true"
+            android:visibility="gone"
+            android:textColor="#F44336"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="Для введення дати або часу натисніть по відповідному напису."/>
+
+
+
+        <View
+            android:id="@+id/View01"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <EditText
+            android:id="@+id/etSearchSurname"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:inputType="phone"
+            android:hint="Номер телефону.."/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_height="fill_parent">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_margin="15dp"
+            android:textIsSelectable="true"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:hint="Пароль.."
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/tvShowPassword"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:onClick="onclickShowPassword"
+            android:background="@drawable/eye"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/change_cont"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:textColor="#ffff"
+            android:background="#787091"
+            android:layout_gravity="center_horizontal"
+            android:onClick="change"
+            android:text=" Авторизація " />
+
+        <TextView
+            android:id="@+id/tvDateBorn"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:textColor="#000000"
+            android:onClick="onclickDateBorn"
+            android:layout_gravity="center_horizontal"
+            android:text="Дата народження:"
+            android:layout_margin="15dp"
+            android:textSize="20sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvDateOtpr"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:textColor="#000000"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onclickDateOtpr"
+            android:text="Введіть дату відправлення"
+            android:padding="10dp"
+            android:textSize="20sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvTimeOtpr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:textColor="#000000"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:onClick="onclickTimeOtpr"
+            android:text="Введіть час відправлення"
+            android:padding="10dp"
+            android:textSize="20sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvDatePrib"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onclickDatePrib"
+            android:text="Введіть дату прибуття"
+            android:padding="10dp"
+            android:textSize="20sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvTimePrib"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onclickTimePrib"
+            android:text="Введіть час прибуття"
+            android:padding="10dp"
+            android:textSize="20sp">
+        </TextView>
+
+        <View
+            android:id="@+id/View02"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:textColor="#795548"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="Якщо встановлено GPS, місцезнаходження визначається за датчиками пристрою. Якщо використання GPS неможливо, необхідно обрати найближчу точку маршруту нижче."/>
+
+        <CheckBox
+            android:id="@+id/cbGPS"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="@string/provider_gps"/>
+
+        <TextView
+            android:id="@+id/tvEnabledGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="20sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:textColor="#795548"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="Якщо GPS не доступний, необхідно дозволити визначати розташування пристрою в розділі Настройки."/>
+
+        <Button
+            android:id="@+id/btnLocationSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffff"
+            android:background="#787091"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:onClick="onClickLocationSettings"
+            android:text="@string/location_settings">
+        </Button>
+
+        <TextView
+            android:id="@+id/tvStatusGPS"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp">
+        </TextView>
+        <TextView
+            android:id="@+id/tvLocationGPS"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:textColor="#F44336"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textIsSelectable="true"
+            android:layout_height="wrap_content"
+            android:text="Почекайте, доки тут не з'являться ваші координати"
+            android:textSize="18sp">
+        </TextView>
+
+        <View
+            android:id="@+id/View03"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_margin="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:textIsSelectable="true"
+            android:hint="Повідомлення.."
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:textColor="#795548"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="У разі небезпечної ситуації разом із сигналом тривоги контактна особа отримає також це текстове повідомлення."/>
+
+        <View
+            android:id="@+id/View04"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:layout_margin="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <CheckBox
+            android:id="@+id/cbAnonymity"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Анонімність"/>
+
+        <CheckBox
+            android:id="@+id/cbSos"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Сигнал тривоги"/>
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:textColor="#795548"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            android:text="У разі потреби невідкладної допомоги."/>
+
+        <View
+            android:id="@+id/View05"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:layout_margin="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#795548"
+            android:textSize="18dp"
+            android:text="Оберіть маршрут та спостерігайте його на карті нижче:"/>
+
+        <Spinner
+            android:id="@+id/spinner_map"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="gravity"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+        </Spinner>
+
+        <TextView
+            android:id="@+id/tv8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:textColor="#795548"
+            android:textSize="18dp"
+            android:text="Найближча точка маршруту:"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal|center_vertical"
+            android:textAlignment="gravity"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="60dp">
+        </Spinner>
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            map:uiCompass="true"
+            map:cameraZoom="4"
+            android:layout_margin="20dp"
+            map:uiRotateGestures="true"
+            map:uiScrollGestures="true"
+            map:uiTiltGestures="true"
+            map:uiZoomControls="true"
+            map:uiZoomGestures="true"/>
+
+        <View
+            android:id="@+id/View06"
+            android:layout_width="fill_parent"
+            android:layout_margin="15dp"
+            android:visibility="gone"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/save_cont"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:textColor="#ffff"
+            android:background="#787091"
+            android:layout_gravity="center_horizontal"
+            android:onClick="save"
+            android:text="   У подорож   " />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.proba_db.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:background="#EEEEEE"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="60"
+            android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image"
+        android:src="@drawable/karpaty"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="300dp" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="40"
+        android:padding="10dp"
+        android:layout_height="fill_parent">
+       <!-- android:layout_weight="40"-->
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/search_contact"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:background="#EEEEEE"
+        android:drawableTop="@drawable/iconssearch"
+        android:layout_gravity="center_horizontal"
+        android:onClick="search_to_db"
+        android:text="пошук"
+        android:textSize="10dp"/>
+
+        <View
+            android:id="@+id/View04"
+            android:layout_width="1dip"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="fill_parent"
+            android:background="#616161" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/add_contact"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#EEEEEE"
+        android:drawableTop="@drawable/iconsadd"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:onClick="add_contact_to_db"
+        android:textSize="10dp"
+        android:text="додати" />
+
+        <View
+            android:id="@+id/View05"
+            android:layout_width="1dip"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="fill_parent"
+            android:background="#616161" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/change_contact"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="10dp"
+        android:background="#EEEEEE"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/iconschange"
+        android:layout_gravity="center_horizontal"
+        android:onClick="change_contact_to_db"
+        android:text="подорож" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/View12"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <Button
+            android:id="@+id/btSos"
+            android:layout_margin="15dp"
+            android:text="Cигнал тривоги  "
+            android:textSize="18dp"
+            android:textColor="#787091"
+            android:drawableLeft="@drawable/sms"
+            android:background="#EEEEEE"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sos_click"/>
+
+        <View
+            android:id="@+id/View01"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+        <EditText
+            android:id="@+id/etSearchSurname"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:visibility="gone"
+            android:inputType="phone"
+            android:hint="Номер телефону.."/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_margin="15dp"
+                android:textIsSelectable="true"
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:visibility="gone"
+                android:hint="Пароль.."
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/tvShowPassword"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:visibility="gone"
+                android:onClick="onclickShowPassword"
+                android:background="@drawable/eye"
+                android:padding="10dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/change_cont"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:textColor="#ffff"
+            android:visibility="gone"
+            android:background="#787091"
+            android:layout_gravity="center_horizontal"
+            android:onClick="change"
+            android:text=" Авторизація " />
+
+        <CheckBox
+            android:id="@+id/cbSos"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Сигнал тривоги"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/save_sos"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:textColor="#ffff"
+            android:background="#787091"
+            android:layout_gravity="center_horizontal"
+            android:onClick="save"
+            android:text="  Надіслати сигнал тривоги  " />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#795548"
+            android:textSize="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="Бажаєте подорожувати безпечно? Ми повідомимо про вашу критичну ситуацію."/>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#795548"
+            android:textSize="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="* Вартість СМС-повідомлення - згідно вашого тарифного плану."/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#795548"
+            android:onClick="about_contact"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="Про додаток. Зворотній зв'язок"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

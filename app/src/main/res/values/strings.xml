@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Безпечний туризм</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="provider_gps">GPS</string>
+    <string name="location_settings">Налаштувати GPS</string>
+    <string name="title_activity_add_contact1">Map</string>
+    <string name="title_activity_current_db1">Map</string>
+    <string name="title_activity_change_contact1">Map</string>
+</resources>

@@ -1,0 +1,141 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.proba_db.Current_db1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#EEEEEE"
+        android:focusableInTouchMode="true"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:id="@+id/View01"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+
+        <EditText
+        android:id="@+id/etSearchSurname"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+            android:textIsSelectable="true"
+        android:hint="Прізвище.."
+            android:inputType="textPersonName"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etSearchName"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:hint="Ім'я.."
+        android:textIsSelectable="true"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:layout_width="150dp"
+        android:id="@+id/search"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:textColor="#787091"
+        android:drawableLeft="@drawable/iconssearch"
+        android:background="#ffff"
+        android:layout_gravity="center_horizontal"
+        android:onClick="search"
+        android:text=" Пошук " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/show_mis_cont"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="#ffff"
+        android:background="#787091"
+        android:layout_gravity="center_horizontal"
+        android:onClick="show_missing"
+        android:text=" Зниклі " />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/show_all_cont"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:textColor="#ffff"
+        android:layout_gravity="center_horizontal"
+        android:background="#787091"
+        android:onClick="show_all"
+        android:text=" Всі туристи " />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/View04"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:textColor="#795548"
+        android:textSize="16dp"
+        android:layout_margin="15dp"/>
+
+        <View
+            android:id="@+id/View05"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="1dip"
+            android:background="#616161" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        map:uiCompass="true"
+        map:cameraZoom="4"
+        android:layout_margin="20dp"
+        map:uiRotateGestures="true"
+        map:uiScrollGestures="true"
+        map:uiTiltGestures="true"
+        map:uiZoomControls="true"
+        map:uiZoomGestures="true"/>
+
+    </LinearLayout>
+</ScrollView>
